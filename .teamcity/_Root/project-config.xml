@@ -26,7 +26,7 @@
         <param name="buildSettings" value="PREFER_VCS" />
         <param name="credentialsStorageType" value="credentialsJSON" />
         <param name="enabled" value="true" />
-        <param name="rootId" value="GitHub" />
+        <param name="rootId" value="GitHub_settings" />
         <param name="showChanges" value="false" />
       </parameters>
     </extension>
