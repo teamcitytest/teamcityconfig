@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="bd9282b2-1d5e-4c22-8d71-28dac503706e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Pizza Calculator</name>
+  <parameters />
+  <cleanup />
+</project>
+
