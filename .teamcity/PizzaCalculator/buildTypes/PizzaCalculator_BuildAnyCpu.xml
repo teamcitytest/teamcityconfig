@@ -3,6 +3,9 @@
   <name>Build AnyCpu</name>
   <description />
   <settings>
+    <options>
+      <option name="artifactRules" value="+:src=&gt;src" />
+    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_1" name="Restore" type="dotnet">
