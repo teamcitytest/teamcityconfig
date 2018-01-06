@@ -4,7 +4,36 @@
   <description />
   <settings>
     <parameters />
-    <build-runners />
+    <build-runners>
+      <runner id="RUNNER_1" name="" type="dotnet">
+        <parameters>
+          <param name="dotnet-command" value="restore" />
+          <param name="dotnet-paths" value="src/pizza-calculator.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_2" name="" type="dotnet">
+        <parameters>
+          <param name="dotnet-command" value="build" />
+          <param name="dotnet-paths" value="src/pizza-calculator.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_3" name="" type="dotnet">
+        <parameters>
+          <param name="dotnet-command" value="restore" />
+          <param name="dotnet-paths" value="tests/pizza-calculator-tests.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_4" name="" type="dotnet">
+        <parameters>
+          <param name="dotnet-command" value="test" />
+          <param name="dotnet-paths" value="tests/pizza-calculator-tests.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="PizzaCalculator_HttpsGithubComTeamcitytestPizzaCalculatorGitRefsHeadsMaster" />
     </vcs-settings>
