@@ -3,6 +3,9 @@
   <name>Build AnyCpu</name>
   <description />
   <settings>
+    <options>
+      <option name="artifactRules" value="+:src/bin/Debug/netcoreapp2.0/=&gt;src/bin/Debug/netcoreapp2.0/" />
+    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_1" name="Restore" type="dotnet">
