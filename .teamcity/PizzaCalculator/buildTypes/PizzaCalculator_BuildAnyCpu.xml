@@ -5,8 +5,9 @@
   <settings>
     <parameters />
     <build-runners>
-      <runner id="RUNNER_1" name="" type="dotnet">
+      <runner id="RUNNER_1" name="Restore" type="dotnet">
         <parameters>
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="dotnet-command" value="restore" />
           <param name="dotnet-paths" value="src/pizza-calculator.csproj" />
           <param name="teamcity.step.mode" value="default" />
