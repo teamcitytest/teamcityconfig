@@ -21,8 +21,9 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
-      <runner id="RUNNER_3" name="" type="dotnet">
+      <runner id="RUNNER_3" name="Restore tests" type="dotnet">
         <parameters>
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="dotnet-command" value="restore" />
           <param name="dotnet-paths" value="tests/pizza-calculator-tests.csproj" />
           <param name="teamcity.step.mode" value="default" />
