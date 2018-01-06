@@ -19,7 +19,7 @@
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_1" sourceBuildTypeId="PizzaCalculator_BuildAnyCpu" cleanDestination="true">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
-        <artifact sourcePath="+:src/bin/Debug/netcoreapp2.0/*=&gt;src/bin/Debug/netcoreapp2.0/" />
+        <artifact sourcePath="+:src/bin/Debug/netcoreapp2.0/=&gt;src/bin/Debug/netcoreapp2.0/" />
       </dependency>
     </artifact-dependencies>
     <dependencies>
