@@ -4,7 +4,7 @@
   <description />
   <settings>
     <options>
-      <option name="artifactRules" value="+:src/bin/Debug/netcoreapp2.0/=&gt;src/bin/Debug/netcoreapp2.0/" />
+      <option name="artifactRules" value="+:src=&gt;src" />
     </options>
     <parameters />
     <build-runners>
