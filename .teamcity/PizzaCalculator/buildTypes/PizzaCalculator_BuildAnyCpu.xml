@@ -13,8 +13,9 @@
           <param name="teamcity.step.mode" value="default" />
         </parameters>
       </runner>
-      <runner id="RUNNER_2" name="" type="dotnet">
+      <runner id="RUNNER_2" name="Build" type="dotnet">
         <parameters>
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="dotnet-command" value="build" />
           <param name="dotnet-paths" value="src/pizza-calculator.csproj" />
           <param name="teamcity.step.mode" value="default" />
