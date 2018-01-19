@@ -8,6 +8,7 @@
       <runner id="RUNNER_5" name="Nuget Pack" type="dotnet">
         <parameters>
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="dotnet-args" value="/p:PackageVersion=1.0.0.%build.counter%" />
           <param name="dotnet-command" value="pack" />
           <param name="dotnet-paths" value="src/pizza-calculator.csproj" />
           <param name="teamcity.step.mode" value="default" />
