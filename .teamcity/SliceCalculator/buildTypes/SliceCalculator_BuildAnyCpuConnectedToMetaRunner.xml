@@ -4,7 +4,15 @@
   <description />
   <settings>
     <parameters />
-    <build-runners />
+    <build-runners>
+      <runner id="RUNNER_6" name="" type="BuildMetaRunner">
+        <parameters>
+          <param name="BuildRuntime" value="win-x86" />
+          <param name="BuildVersion" value="0.0.0" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings />
     <requirements />
     <build-triggers />
