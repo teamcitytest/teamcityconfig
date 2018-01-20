@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f5eb889f-ab0a-4440-bbe6-8a5c3f9cd697" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Build AnyCpu</name>
+  <description>Build configuration created from meta-runner BuildAnyCpuMetaRunner</description>
+  <settings>
+    <parameters>
+      <param name="BuildVersion" value="0.0.0" spec="text display='prompt' label='Numéro de version' orderNumber='1.0' regexp='^(\d+\.)?(\d+\.)?(\d+)$' validationMessage='Le numéro de version doit être du type: x.y.z' validationMode='regex'" />
+    </parameters>
+    <build-runners>
+      <runner id="BuildAnyCpuMetaRunner_0" name="Restore" type="dotnet">
+        <parameters>
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="dotnet-command" value="restore" />
+          <param name="dotnet-paths" value="src/pizza-calculator.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="BuildAnyCpuMetaRunner_1" name="Build" type="dotnet">
+        <parameters>
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="dotnet-build-config" value="Release" />
+          <param name="dotnet-command" value="build" />
+          <param name="dotnet-paths" value="src/pizza-calculator.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="BuildAnyCpuMetaRunner_2" name="Restore tests" type="dotnet">
+        <parameters>
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="dotnet-command" value="restore" />
+          <param name="dotnet-paths" value="tests/pizza-calculator-tests.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="BuildAnyCpuMetaRunner_3" name="Test" type="dotnet">
+        <parameters>
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="dotnet-command" value="test" />
+          <param name="dotnet-paths" value="tests/pizza-calculator-tests.csproj" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
