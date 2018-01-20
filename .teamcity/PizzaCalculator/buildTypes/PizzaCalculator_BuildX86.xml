@@ -5,7 +5,7 @@
   <settings ref="PizzaCalculator_Build">
     <parameters />
     <build-runners order="RUNNER_1, RUNNER_2, RUNNER_7, RUNNER_3, RUNNER_4">
-      <runner id="RUNNER_7" name="Build (1)" type="dotnet">
+      <runner id="RUNNER_7" name="Build x86" type="dotnet">
         <parameters>
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="dotnet-build-config" value="Release" />
