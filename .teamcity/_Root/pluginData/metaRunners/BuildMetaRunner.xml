@@ -3,7 +3,7 @@
   <description>Metarunner for building with .NET Core</description>
   <settings>
     <parameters>
-      <param name="BuildRuntime" value="" spec="text label='Configuration runtime dotne' validationMode='any' display='normal'" />
+      <param name="BuildRuntime" value="" spec="text label='Configuration runtime dotnet' validationMode='any' display='normal'" />
       <param name="BuildVersion" value="0.0.0" spec="text regexp='^(\d+\.)?(\d+\.)?(\d+)$' label='Numéro de version' validationMode='regex' display='prompt' validationMessage='Le numéro de version doit être du type: x.y.z'" />
     </parameters>
     <build-runners>
