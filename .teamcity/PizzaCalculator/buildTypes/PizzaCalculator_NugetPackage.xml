@@ -17,7 +17,9 @@
         </parameters>
       </runner>
     </build-runners>
-    <vcs-settings />
+    <vcs-settings>
+      <vcs-entry-ref root-id="PizzaCalculator_HttpsGithubComTeamcitytestPizzaCalculatorGitRefsHeadsMaster" />
+    </vcs-settings>
     <requirements />
     <build-triggers />
     <artifact-dependencies>
