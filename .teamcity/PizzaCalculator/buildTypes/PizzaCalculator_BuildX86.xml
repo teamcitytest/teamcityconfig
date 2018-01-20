@@ -3,6 +3,9 @@
   <name>Build x86</name>
   <description />
   <settings ref="PizzaCalculator_Build">
+    <disabled-settings>
+      <setting-ref ref="RUNNER_2" />
+    </disabled-settings>
     <parameters />
     <build-runners order="RUNNER_1, RUNNER_2, RUNNER_7, RUNNER_3, RUNNER_4">
       <runner id="RUNNER_7" name="Build x86" type="dotnet">
