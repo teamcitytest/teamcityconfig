@@ -3,7 +3,9 @@
   <name>Nuget package</name>
   <description />
   <settings>
-    <parameters />
+    <parameters>
+      <param name="reverse.dep.*.BuildVersion" value="0.0.0" />
+    </parameters>
     <build-runners>
       <runner id="RUNNER_5" name="Nuget Pack" type="dotnet">
         <parameters>
