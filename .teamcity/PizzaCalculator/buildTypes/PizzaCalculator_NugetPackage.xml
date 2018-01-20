@@ -3,7 +3,9 @@
   <name>Nuget package</name>
   <description />
   <settings>
-    <parameters />
+    <parameters>
+      <param name="BuildVersion" value="0.0.0" spec="text regexp='^(\d+\.)?(\d+\.)?(\d+)$' display='prompt' validationMessage='Le numéro de version doit être du type: x.y.z' label='Numéro de version' validationMode='regex'" />
+    </parameters>
     <build-runners>
       <runner id="RUNNER_5" name="Nuget Pack" type="dotnet">
         <parameters>
