@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="bd9282b2-1d5e-4c22-8d71-28dac503706e" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
   <name>Pizza Calculator</name>
-  <parameters />
+  <parameters>
+    <param name="BuildVersion" value="0.0.0" spec="text regexp='^(\d+\.)?(\d+\.)?(\d+)$' label='Numéro de version' validationMode='regex' display='prompt' validationMessage='Le numéro de version doit être du type: x.y.z'" />
+  </parameters>
   <cleanup />
 </project>
 
