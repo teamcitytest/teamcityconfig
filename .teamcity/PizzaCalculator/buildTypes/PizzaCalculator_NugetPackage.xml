@@ -3,9 +3,7 @@
   <name>Nuget package</name>
   <description />
   <settings>
-    <parameters>
-      <param name="BuildVersion" value="0.0.0" />
-    </parameters>
+    <parameters />
     <build-runners>
       <runner id="RUNNER_5" name="Nuget Pack" type="dotnet">
         <parameters>
