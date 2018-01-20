@@ -7,7 +7,7 @@
       <option name="artifactRules" value="+:src=&gt;src" />
     </options>
     <parameters>
-      <param name="BuildVersion" value="0.0.0" />
+      <param name="BuildVersion" value="0.0.0" spec="text regexp='^(\d+\.)?(\d+\.)?(\d+)$' label='Numéro de version' validationMode='regex' display='prompt' validationMessage='Le numéro de version doit être du type: x.y.z'" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_1" name="Restore" type="dotnet">
