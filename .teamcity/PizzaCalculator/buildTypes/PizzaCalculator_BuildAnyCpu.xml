@@ -7,7 +7,6 @@
       <option name="artifactRules" value="+:src=&gt;src" />
     </options>
     <parameters>
-      <param name="BuildVersion" value="0.0.0" />
       <param name="reverse.dep.*.BuildVersion" value="0.0.0" />
     </parameters>
     <build-runners>
