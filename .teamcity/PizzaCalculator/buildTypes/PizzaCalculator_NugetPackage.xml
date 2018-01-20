@@ -22,6 +22,15 @@
     </vcs-settings>
     <requirements />
     <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_3" type="VcsLabeling">
+        <parameters>
+          <param name="labelingPattern" value="build-%reverse.dep.*.BuildVersion%" />
+          <param name="successfulOnly" value="true" />
+          <param name="vcsRootId" value="PizzaCalculator_HttpsGithubComTeamcitytestPizzaCalculatorGitRefsHeadsMaster" />
+        </parameters>
+      </extension>
+    </build-extensions>
     <artifact-dependencies>
       <dependency id="ARTIFACT_DEPENDENCY_1" sourceBuildTypeId="PizzaCalculator_BuildAnyCpu" cleanDestination="true">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
