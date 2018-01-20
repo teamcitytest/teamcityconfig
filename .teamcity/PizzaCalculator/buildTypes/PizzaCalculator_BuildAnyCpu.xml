@@ -57,7 +57,7 @@
           <param name="teamcity.file.content.replacer.pattern" value="(&lt;(AssemblyVersion)\s*&gt;).*(&lt;\/\s*\2\s*&gt;)" />
           <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
           <param name="teamcity.file.content.replacer.regexMode" value="REGEX" />
-          <param name="teamcity.file.content.replacer.replacement" value="$1\%build.number%$3" />
+          <param name="teamcity.file.content.replacer.replacement" value="$1\%BuildVersion%.build.number%$3" />
           <param name="teamcity.file.content.replacer.wildcards" value="**/*.csproj" />
         </parameters>
       </extension>
