@@ -9,6 +9,7 @@
         <parameters>
           <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
           <param name="dotnet-build-config" value="Release" />
+          <param name="dotnet-build-runtime" value="win-x86" />
           <param name="dotnet-command" value="build" />
           <param name="dotnet-paths" value="src/pizza-calculator.csproj" />
           <param name="teamcity.step.mode" value="default" />
