@@ -2,77 +2,12 @@
 <build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1a53f305-5a85-4dcd-966e-11cb4bd2d3a1" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
   <name>Build AnyCpu</name>
   <description />
-  <settings>
-    <options>
-      <option name="artifactRules" value="+:src=&gt;src" />
-    </options>
-    <parameters>
-      <param name="BuildVersion" value="0.0.0" spec="text regexp='^(\d+\.)?(\d+\.)?(\d+)$' label='Numéro de version' validationMode='regex' display='prompt' validationMessage='Le numéro de version doit être du type: x.y.z'" />
-    </parameters>
-    <build-runners>
-      <runner id="RUNNER_1" name="Restore" type="dotnet">
-        <parameters>
-          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="dotnet-command" value="restore" />
-          <param name="dotnet-paths" value="src/pizza-calculator.csproj" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_2" name="Build" type="dotnet">
-        <parameters>
-          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="dotnet-build-config" value="Release" />
-          <param name="dotnet-command" value="build" />
-          <param name="dotnet-paths" value="src/pizza-calculator.csproj" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_3" name="Restore tests" type="dotnet">
-        <parameters>
-          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="dotnet-command" value="restore" />
-          <param name="dotnet-paths" value="tests/pizza-calculator-tests.csproj" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_4" name="Test" type="dotnet">
-        <parameters>
-          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
-          <param name="dotnet-command" value="test" />
-          <param name="dotnet-paths" value="tests/pizza-calculator-tests.csproj" />
-          <param name="teamcity.step.mode" value="default" />
-        </parameters>
-      </runner>
-    </build-runners>
-    <vcs-settings>
-      <vcs-entry-ref root-id="PizzaCalculator_HttpsGithubComTeamcitytestPizzaCalculatorGitRefsHeadsMaster" />
-    </vcs-settings>
+  <settings ref="PizzaCalculator_Build">
+    <parameters />
+    <build-runners order="RUNNER_1, RUNNER_2, RUNNER_3, RUNNER_4" />
+    <vcs-settings />
     <requirements />
     <build-triggers />
-    <build-extensions>
-      <extension id="BUILD_EXT_1" type="JetBrains.FileContentReplacer">
-        <parameters>
-          <param name="teamcity.file.content.replacer.file.encoding" value="UTF-8" />
-          <param name="teamcity.file.content.replacer.file.encoding.custom" value="UTF-8" />
-          <param name="teamcity.file.content.replacer.pattern" value="(&lt;(AssemblyVersion)\s*&gt;).*(&lt;\/\s*\2\s*&gt;)" />
-          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
-          <param name="teamcity.file.content.replacer.regexMode" value="REGEX" />
-          <param name="teamcity.file.content.replacer.replacement" value="$1\%BuildVersion%.%build.counter%$3" />
-          <param name="teamcity.file.content.replacer.wildcards" value="**/*.csproj" />
-        </parameters>
-      </extension>
-      <extension id="BUILD_EXT_2" type="JetBrains.FileContentReplacer">
-        <parameters>
-          <param name="teamcity.file.content.replacer.file.encoding" value="UTF-8" />
-          <param name="teamcity.file.content.replacer.file.encoding.custom" value="UTF-8" />
-          <param name="teamcity.file.content.replacer.pattern" value="(&lt;(FileVersion)\s*&gt;).*(&lt;\/\s*\2\s*&gt;)" />
-          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
-          <param name="teamcity.file.content.replacer.regexMode" value="REGEX" />
-          <param name="teamcity.file.content.replacer.replacement" value="$1\%BuildVersion%.%build.counter%$3" />
-          <param name="teamcity.file.content.replacer.wildcards" value="**/*.csproj" />
-        </parameters>
-      </extension>
-    </build-extensions>
     <cleanup />
   </settings>
 </build-type>
