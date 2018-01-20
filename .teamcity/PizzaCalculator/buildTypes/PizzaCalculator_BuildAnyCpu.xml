@@ -7,7 +7,7 @@
       <option name="artifactRules" value="+:src=&gt;src" />
     </options>
     <parameters>
-      <param name="BuildVersion" value="" />
+      <param name="BuildVersion" value="0.0.0" />
     </parameters>
     <build-runners>
       <runner id="RUNNER_1" name="Restore" type="dotnet">
