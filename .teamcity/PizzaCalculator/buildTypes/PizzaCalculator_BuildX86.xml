@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="279b59ff-1de3-4c87-aec6-e81e7da1342d" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Build x86</name>
+  <description />
+  <settings ref="PizzaCalculator_Build">
+    <parameters>
+      <param name="BuildRuntime" value="win-x86" />
+    </parameters>
+    <build-runners order="RUNNER_1, RUNNER_2, RUNNER_3, RUNNER_4" />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
